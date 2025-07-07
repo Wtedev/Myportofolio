@@ -63,16 +63,19 @@
       
 
     <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skill-card">🎨<br>Illustrator<br><span class="skill-type">Technical</span></div>
-        <div class="skill-card">🖌️<br>Photoshop<br><span class="skill-type">Technical</span></div>
-        <div class="skill-card">📊<br>Excel<br><span class="skill-type">Technical</span></div>
-        <div class="skill-card">🌐<br>HTML & CSS<br><span class="skill-type">Technical</span></div>
-        <div class="skill-card">🐍<br>Python<br><span class="skill-type">Technical</span></div>
-        <div class="skill-card">🚀<br>Creativity<br><span class="skill-type">Soft</span></div>
-        <div class="skill-card">🧠<br>Adaptability<br><span class="skill-type">Soft</span></div>
-        <div class="skill-card">🤝<br>Team Work<br><span class="skill-type">Soft</span></div>
-    </section>
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills-list">
+        <li>🎨<br> Illustrator<br><span class="skill-type">Technical</span></li>
+        <li>🖌️ <br>Photoshop<br> <span class="skill-type">Technical</span></li>
+        <li>📊<br> Excel<br> <span class="skill-type">Technical</span></li>
+        <li>🌐<br> HTML & CSS<br> <span class="skill-type">Technical</span></li>
+        <li>🐍<br> Python<br> <span class="skill-type">Technical</span></li>
+        <li>🚀<br> Creativity<br> <span class="skill-type">Soft</span></li>
+        <li>🧠<br> Adaptability<br> <span class="skill-type">Soft</span></li>
+        <li>🤝<br>Team Work<br> <span class="skill-type">Soft</span></li>
+    </ul>
+</section>
+
 
     <section id="projects" class="projects">
         <h2 class="section-title">Projects</h2>
@@ -118,6 +121,45 @@
             user experience challenges. Won 1st place in the FoodTech Hackathon</p>
         </div>
     </section>
+
+    <section id="works" class="my-works">
+      <h2 class="section-title">My Works - Design Showcase</h2>
+      <div class="slider-container">
+          <div class="slider-track">
+              <img src="assets/images/myworks/design1.png" alt="Design1">
+              <img src="assets/images/myworks/design2.png" alt="Design2">
+              <img src="assets/images/myworks/design3.png" alt="Design3">
+              <img src="assets/images/myworks/design4.png" alt="Design4">
+              <img src="assets/images/myworks/design5.png" alt="Design5">
+              <img src="assets/images/myworks/design6.png" alt="Design6">
+              <img src="assets/images/myworks/design7.png" alt="Design7">
+              <img src="assets/images/myworks/design8.png" alt="Design8">
+              <img src="assets/images/myworks/design9.png" alt="Design9">
+              <img src="assets/images/myworks/design10.png" alt="Design10">
+              <img src="assets/images/myworks/design11.png" alt="Design11">
+              <img src="assets/images/myworks/design12.png" alt="Design12">
+              <img src="assets/images/myworks/design13.png" alt="Design13">
+              <img src="assets/images/myworks/design14.png" alt="Design14">
+              <img src="assets/images/myworks/design15.png" alt="Design15">
+              <img src="assets/images/myworks/design16.png" alt="Design16">
+
+
+              <!-- يمكنك إضافة أي عدد من الصور بنفس الطريقة -->
+          </div>
+      </div>
+  </section>
+  
+  
+  
+    <section id="education" class="education">
+      <h2 class="section-title">Education</h2>
+      <div class="education-card">
+          <h3>Qassim University, Qassim</h3>
+          <p>Bachelor's Degree in Computer Science<br>Expected Graduation: 2025</p>
+      </div>
+  </section>
+  
+
 
     <section id="experiences" class="experiences">
         <h2 class="section-title">Experiences</h2>
@@ -183,17 +225,16 @@
         <div class="footer-bottom">
         <p>Feel free to reach out via social media or visit us at: Riyadh, Saudi Arabia</p>
         </div>
+        <div class="socials-footer">
+          <a href="https://wa.me/966580892260" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/lamainspire" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/lamainspire" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://tiktok.com/@lamainspire" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+      
     </footer>
     <p class="copyright-text" >All rights reserved © Lama Almushyqih</p>
 </div>
-  <script>
-    const cards = document.querySelectorAll('.project-card, .experience-card');
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        const p = card.querySelector('p');
-        p.style.display = p.style.display === 'none' ? 'block' : 'none';
-      });
-    });
-  </script>
+<script src="js/script.js"></script>
 </body>
 </html>
