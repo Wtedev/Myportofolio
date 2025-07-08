@@ -59,6 +59,17 @@ nav a {
   color: #333;
   font-weight: 500;  
 }
+body.dark-mode nav.main-menu {
+  background-color: #2c2c2c !important;
+}
+
+body.dark-mode nav.main-menu a {
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode nav.main-menu .close-button {
+  color: #ff6b81 !important;
+}
 
 .socials {
   display: flex;
