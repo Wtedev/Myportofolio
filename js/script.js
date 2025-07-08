@@ -70,31 +70,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Create a temporary top banner notification
-
+// Create a floating chat-style welcome message at bottom right
 function showTemporaryBanner(message) {
     const banner = document.createElement('div');
     banner.textContent = message;
+
+    // Basic styles
     banner.style.position = 'fixed';
-    banner.style.top = '0';
-    banner.style.left = '0';
-    banner.style.width = '100%';
+    banner.style.bottom = '30px';
+    banner.style.right = '30px';
+    banner.style.maxWidth = '300px';
     banner.style.backgroundColor = '#e11a54';
     banner.style.color = 'white';
-    banner.style.padding = '10px';
-    banner.style.textAlign = 'center';
+    banner.style.padding = '15px 20px';
+    banner.style.borderRadius = '18px';
+    banner.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+    banner.style.fontWeight = '500';
     banner.style.zIndex = '9999';
-    banner.style.fontWeight = 'bold';
+    banner.style.opacity = '1';
     banner.style.transition = 'opacity 0.5s ease';
+
+    // Optional animation (slide-in)
+    banner.style.transform = 'translateY(20px)';
+    banner.style.transition += ', transform 0.4s ease';
+
     document.body.appendChild(banner);
 
+    // Animate in
+    requestAnimationFrame(() => {
+        banner.style.transform = 'translateY(0)';
+    });
+
+    // Hide after 4s
     setTimeout(() => {
         banner.style.opacity = '0';
+        banner.style.transform = 'translateY(20px)';
         setTimeout(() => {
             banner.remove();
         }, 500);
-    }, 3000);
+    }, 4000);
 }
+
 
 // Show welcome banner 2 seconds after page load
 
