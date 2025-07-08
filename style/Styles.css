@@ -18,7 +18,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 12vw;
+  padding: 10px 10vw;
   background-color: rgba(255, 255, 255, 0.8);
   position: sticky;
   top: 0;
@@ -303,11 +303,11 @@ footer button {
 .footer-bottom {
   margin-top: 20px;
   font-size: 0.9rem;
-  color: #555;
+  color: #747474;
 }
 .copyright-text {
   font-size: 0.9rem;
-  color: #555;
+  color: #747474;
   text-align: center;
   margin-top: 20px;
   font-weight: 400;
@@ -398,21 +398,27 @@ footer button {
   cursor: pointer;
 }
 .socials-footer {
-  margin-top: 20px;
+  margin-top: 10px;      
+  margin-bottom: 30px;  
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;           
 }
 
 .socials-footer a {
-  font-size: 1.5rem;
-  color: #e11a54;
+  font-size: 1.4rem;
+  color: #555;
   transition: transform 0.2s ease;
+}
+
+body.dark-mode .socials-footer a {
+  color: #f5f5f5;/
 }
 
 .socials-footer a:hover {
   transform: scale(1.2);
 }
+
 .project-card p,
 .experience-card p {
     transition: opacity 0.3s ease;
@@ -505,4 +511,96 @@ footer button {
   color: gray;
   margin-top: 5px;
 }
+/* ========== Dark Mode Base ========== */
+body.dark-mode {
+  background: #121212 !important;
+  color: #f1f1f1;
+}
 
+/* ========== Layout Elements ========== */
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #333333 !important;
+}
+
+body.dark-mode nav a,
+body.dark-mode .section-title,
+body.dark-mode .description,
+body.dark-mode .subtitle,
+body.dark-mode .intro {
+  color: #f5f5f5 !important;
+}
+
+/* ========== Cards & Components ========== */
+body.dark-mode .hero {
+  background-color:  #333333 !important;
+  color: #fff;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .experience-card,
+body.dark-mode .skills-list li,
+body.dark-mode .language,
+body.dark-mode .design-card {
+  background-color: #333333 !important;
+  color: #eee !important;
+}
+
+/* ========== Buttons ========== */
+.hire-button,
+footer button {
+  background-color: #e11a54;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hire-button:hover,
+footer button:hover {
+  background-color: #c71346;
+}
+
+body.dark-mode .hire-button {
+  background-color: #e11a54;
+}
+
+body.dark-mode .hire-button:hover {
+  background-color: #ff4d6d;
+}
+
+/* ========== Form Fields ========== */
+footer input,
+footer textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+body.dark-mode footer input,
+body.dark-mode footer textarea {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #747474;
+}
+
+/* ========== Education Section ========== */
+.education-card {
+  background-color: transparent;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+/* ========== Change Mode Icon ========== */
+
+#theme-toggle {
+  color: #333; 
+  transition: color 0.3s ease;
+}
+
+body.dark-mode #theme-toggle {
+  color: white; 
+}

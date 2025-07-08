@@ -111,7 +111,6 @@ function showTemporaryBanner(message) {
     }, 4000);
 }
 
-
 // Show welcome banner 2 seconds after page load
 
 setTimeout(() => {
@@ -141,3 +140,29 @@ if (sliderTrack && sliderContainer) {
 
     animateSlider();
 }
+// Theme toggle
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Load saved mode on page load
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  toggleBtn.classList.remove("fa-moon");
+  toggleBtn.classList.add("fa-sun");
+}
+// On click toggle
+toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+  
+    if (body.classList.contains("dark-mode")) {
+      toggleBtn.classList.remove("fa-moon");
+      toggleBtn.classList.add("fa-sun");
+      localStorage.setItem("theme", "dark");
+    } else {
+      toggleBtn.classList.remove("fa-sun");
+      toggleBtn.classList.add("fa-moon");
+      localStorage.setItem("theme", "light");
+    }
+  });
+  
+  
