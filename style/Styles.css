@@ -18,7 +18,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10vw;
+  padding: 10px 5vw;
   background-color: rgba(255, 255, 255, 0.8);
   position: sticky;
   top: 0;
