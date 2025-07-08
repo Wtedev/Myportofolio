@@ -594,13 +594,25 @@ body.dark-mode footer textarea {
   margin: 10px 0;
 }
 
-/* ========== Change Mode Icon ========== */
-
+/* ========== Theme Toggle Icon ========== */
 #theme-toggle {
-  color: #333; 
-  transition: color 0.3s ease;
+  font-size: 24px;
+  cursor: pointer;
+  color: #e11a54;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
 
 body.dark-mode #theme-toggle {
-  color: white; 
+  color: #ffc107; 
+  transform: rotate(180deg); 
+}
+
+
+#theme-toggle:hover {
+  transform: scale(1.2) rotate(15deg);
+  color: #ff6b81; 
+}
+
+#theme-toggle:hover {
+  text-shadow: 0 0 5px currentColor;
 }
