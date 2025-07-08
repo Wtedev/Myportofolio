@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <!-- Meta Tags -->
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title and Favicon -->
   <title>Lama Almushyqih Portfolio</title>
   <link rel="icon" href="assets/images/website icon.png">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style/Styles.css?v=2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <img class="logo2" src="assets/images/logo.png" alt="My logo">
     <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
     <label for="menu-toggle" class="menu-toggle-label">☰</label>
     <nav class="main-menu">
       <label for="menu-toggle" class="close-button">✖</label>
+      <!-- Navigation Links -->
       <a href="#hero">About Lama</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -26,45 +33,45 @@
       <a href="#experiences">Experiences</a>
       <a href="#languages">Languages</a>
       <a href="#contact">Contact Form</a>
+      <!-- Social Links -->
       <div class="socials">
         <a class="socialsicons" href="https://github.com/wtedev" target="_blank"><i class="fab fa-github"></i></a>
         <a class="socialsicons" href="https://linkedin.com/in/lamaalmushyqih" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
       <a class="hire-button" href="https://wa.me/966580892260" target="_blank">Hire Me</a>
     </nav>
-    
   </header>
 
+  <!-- Main Container -->
   <div class="container">
-    <section class="hero">
-        <div class="hero-text">
-          <div class="availability-badge">
-            <span class="pulse-dot"></span>
-            Open to immediately work.
-          </div>          
-          <p class="intro">Hello I'm</p>
-          <h1 class="Myname">Lama Almushyqih</h1>
-          <h2 class="subtitle">Frontend Developer and Creative Graphic Designer</h2>
-          <p class="description">
-            I bring ideas to life with design and code. Passionate about elegant UIs and clear communication.
-          </p>
-      
-          <div class="hero-buttons">
-            <button class="hire-button">Hire Me</button>
-            <button class="hire-button">My Works</button>
-          </div>
-      
-        </div>
-      
-        <div class="hero-image">
-          <img src="assets/images/logo.png" alt="logo icon">
-        </div>
-      </section>
-      
 
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-text">
+        <div class="availability-badge">
+          <span class="pulse-dot"></span>
+          Open to immediately work.
+        </div>
+        <p class="intro">Hello I'm</p>
+        <h1 class="Myname">Lama Almushyqih</h1>
+        <h2 class="subtitle">Frontend Developer and Creative Graphic Designer</h2>
+        <p class="description">
+          I bring ideas to life with design and code. Passionate about elegant UIs and clear communication.
+        </p>
+        <div class="hero-buttons">
+          <button class="hire-button">Hire Me</button>
+          <button class="hire-button">My Works</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/logo.png" alt="logo icon">
+      </div>
+    </section>
+
+    <!-- Skills Section -->
     <section id="skills" class="skills">
-    <h2 class="section-title">Skills</h2>
-    <ul class="skills-list">
+      <h2 class="section-title">Skills</h2>
+      <ul class="skills-list">
         <li>🎨<br> Illustrator<br><span class="skill-type">Technical</span></li>
         <li>🖌️ <br>Photoshop<br> <span class="skill-type">Technical</span></li>
         <li>📊<br> Excel<br> <span class="skill-type">Technical</span></li>
@@ -73,166 +80,198 @@
         <li>🚀<br> Creativity<br> <span class="skill-type">Soft</span></li>
         <li>🧠<br> Adaptability<br> <span class="skill-type">Soft</span></li>
         <li>🤝<br>Team Work<br> <span class="skill-type">Soft</span></li>
-    </ul>
-</section>
-
-
-    <section id="projects" class="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="project-card">
-        
-        <div class="project-header">
-            <span>Jareed Project, Qassim</span>
-            <span style="color:gray">2025</span>
-            
-        </div>
-        <p style="display:none">Automated Warehouse Inventory System
-            An innovative concept for automating warehouse management by linking it to a dashboard system
-            using sensors for inventory counting and tracking. Studied the idea in detail, developed use cases,
-            analyzed suitable markets, and evaluated system requirements. Created a prototype of the system to
-            test sensor types and received feedback from industry experts. The project is ongoing, with plans to
-            integrate Python for dashboard development.</p>
-        </div>
-        <div class="project-card">
-        <div class="project-header">
-            <span>Tic-Tac-Toe Game, Qassim</span>
-            <span style="color:gray">2025</span>
-        </div>
-        <p style="display:none">A Python-based Tic-Tac-Toe (XO) game featuring a graphical user interface built with Tkinter. The project includes two playing modes: Player vs. Player and Player vs. Computer. Implemented an intelligent algorithm that allows the computer to make strategic moves aimed at winning or blocking the opponent, rather than choosing randomly. Focused on designing an interactive, visually clear layout that updates game states in real-time. The code structure emphasizes modularity and readability, with functions for win detection, move validation, and game resets. This project introduced key concepts in event-driven programming, game logic design, and basic AI integration in Python.
-        </p>
-        </div>
-        <div class="project-card">
-            <div class="project-header">
-                <span>Mosque Data Management System, Qassim</span>
-                <span style="color:gray">2025</span>
-            </div>
-            <p style="display:none">Python-Based GUI Application for Mosque and Imam Organization
-                A comprehensive Python application developed with a graphical user interface (GUI) to organize and manage data related to mosques and their assigned imams. The system allows users to add, edit, or remove imam records, associate each imam with a specific mosque, and perform quick searches within the database. Integrated Google Maps API functionality enables users to view mosque locations on an interactive map. Designed with Tkinter for the front-end and SQLite for backend data storage, ensuring smooth data handling and a user-friendly experience. The project emphasizes clean database operations, GUI responsiveness, and practical usability for community and religious centers.
-            </p>
-            </div>
-        <div class="project-card">
-        <div class="project-header">
-            <span>TeckLine Project, Qassim</span>
-            <span style="color:gray">2024</span>
-        </div>
-        <p style="display:none">Innovative Restaurant Queue Management System
-            A web-based platform that allows users to view restaurant wait times and the number of people in line.
-            Collaborated with a team to plan, analyze, and develop the idea, solving problems and overcoming
-            user experience challenges. Won 1st place in the FoodTech Hackathon</p>
-        </div>
+      </ul>
     </section>
 
-    <section id="works" class="my-works">
-      <h2 class="section-title">My Works - Design Showcase</h2>
-      <div class="slider-container">
-          <div class="slider-track">
-              <img src="assets/images/myworks/Design1.png" alt="Design1">
-              <img src="assets/images/myworks/Design2.png" alt="Design2">
-              <img src="assets/images/myworks/Design3.png" alt="Design3">
-              <img src="assets/images/myworks/Design4.png" alt="Design4">
-              <img src="assets/images/myworks/Design5.png" alt="Design5">
-              <img src="assets/images/myworks/Design6.png" alt="Design6">
-              <img src="assets/images/myworks/Design7.png" alt="Design7">
-              <img src="assets/images/myworks/Design8.png" alt="Design8">
-              <img src="assets/images/myworks/Design9.png" alt="Design9">
-              <img src="assets/images/myworks/Design10.png" alt="Design10">
-              <img src="assets/images/myworks/Design11.png" alt="Design11">
-              <img src="assets/images/myworks/Design12.png" alt="Design12">
-              <img src="assets/images/myworks/Design13.png" alt="Design13">
-              <img src="assets/images/myworks/Design14.png" alt="Design14">
-              <img src="assets/images/myworks/Design15.png" alt="Design15">
-              <img src="assets/images/myworks/Design16.png" alt="Design16">
-              <!-- يمكنك إضافة أي عدد من الصور بنفس الطريقة -->
-          </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <!-- Section Title -->
+      <h2 class="section-title">Projects</h2>
+      <!-- Project Cards -->
+      <!-- Project Card 1: Jareed Project -->
+      <div class="project-card">
+        <div class="project-header">
+          <span>Jareed Project, Qassim</span>
+          <span style="color:gray">2025</span>
+        </div>
+        <div style="display:none">
+          <p>Automated Warehouse Inventory System</p>
+          <ul>
+            <li>Developed an automation concept for warehouse management using sensor-based tracking and dashboard systems.</li>
+            <li>Conducted feasibility study, market analysis, and requirement evaluations.</li>
+            <li>Built a prototype and tested multiple sensor types; received expert feedback.</li>
+            <li>Planned to integrate Python for dashboard development (in progress).</li>
+          </ul>
+        </div>
       </div>
-  </section>
-  
-  
-  
+      <!-- Project Card 2: Tic-Tac-Toe Game -->
+      <div class="project-card">
+        <div class="project-header">
+          <span>Tic-Tac-Toe Game, Qassim</span>
+          <span style="color:gray">2025</span>
+        </div>
+        <div style="display:none">
+          <p>Python-based XO game with GUI</p>
+          <ul>
+            <li>Implemented two modes: Player vs Player and Player vs Computer.</li>
+            <li>Designed intelligent AI for strategic computer moves.</li>
+            <li>Used Tkinter for GUI with real-time game state updates.</li>
+            <li>Modular codebase with functions for win logic, validation, and reset.</li>
+            <li>Practiced event-driven programming and basic AI techniques.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Project Card 3: Mosque Data Management System -->
+      <div class="project-card">
+        <div class="project-header">
+          <span>Mosque Data Management System, Qassim</span>
+          <span style="color:gray">2025</span>
+        </div>
+        <div style="display:none">
+          <p>Python-Based GUI App for Imam & Mosque Data</p>
+          <ul>
+            <li>Developed a Tkinter-based UI for adding, editing, and removing imam records.</li>
+            <li>Linked imams with mosques using a clean database interface (SQLite).</li>
+            <li>Integrated Google Maps API for viewing mosque locations interactively.</li>
+            <li>Designed for religious/community centers with emphasis on usability and performance.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Project Card 4: TeckLine Project -->
+      <div class="project-card">
+        <div class="project-header">
+          <span>TeckLine Project, Qassim</span>
+          <span style="color:gray">2024</span>
+        </div>
+        <div style="display:none">
+          <p>Restaurant Queue Management Platform</p>
+          <ul>
+            <li>Developed a web app showing real-time wait times and queue lengths.</li>
+            <li>Collaborated in a team to solve UX issues and platform flow.</li>
+            <li>Won 1st place in the FoodTech Hackathon competition.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Education Section -->
     <section id="education" class="education">
       <h2 class="section-title">Education</h2>
       <div class="education-card">
-          <h3>Qassim University, Qassim</h3>
-          <p>Bachelor's Degree in Computer Science<br>Expected Graduation: 2025</p>
+        <h3>Qassim University, Qassim</h3>
+        <p>Bachelor's Degree in Computer Science<br>Expected Graduation: 2025</p>
       </div>
-  </section>
-  
+    </section>
 
-
+    <!-- Experiences Section -->
     <section id="experiences" class="experiences">
-        <h2 class="section-title">Experiences</h2>
-        <div class="experience-card">
+      <h2 class="section-title">Experiences</h2>
+      <!-- Experience Cards -->
+      <!-- Experience Card 1: Raqi Wa Emar -->
+      <div class="experience-card">
         <div class="experience-header">
-            <span>Raqi Wa Emar, Riyadh</span>
-            <span style="color:gray">IT Administrator, 03/2024 - Present</span>
+          <span>Raqi Wa Emar, Riyadh</span>
+          <span style="color: gray">IT Administrator, 03/2024 - Present</span>
         </div>
-        <p style="display:none">Responsible for driving the company's digital transformation through the implementation
-            of enterprise software systems and enhancing operational workflows.</br>
-            ● Responsible for driving the company's digital transformation through the implementation of
-            enterprise software systems and enhancing operational workflows, designed the company profile,
-            creating UI/UX designs.</br>
-            ● Configured and implemented the Odoo ERP system, enabling automation of internal
-            operations and trained accountants on its use.</br>
-            ● Developed and maintained Excel spreadsheets for generating quotations, invoices, and
-            other operational documents, leveraging advanced data analysis skills.</p>
+        <div style="display: none">
+          <p>Responsible for driving the company's digital transformation through the implementation
+            of enterprise software systems and enhancing operational workflows.</p>
+          <ul>
+            <li>Led digital transformation through enterprise software systems and UI/UX design for company profile.</li>
+            <li>Configured and implemented Odoo ERP; trained accountants on its usage.</li>
+            <li>Developed Excel tools for quotations, invoices, and operational documents using advanced data analysis.</li>
+          </ul>
         </div>
-        <div class="experience-card">
+      </div>
+      <!-- Experience Card 2: Qassim University -->
+      <div class="experience-card">
         <div class="experience-header">
-            <span>College of Computer, Qassim University, Qassim</span>
-            <span style="color:gray">Graphic Designer, 01/2025 - Present</span>
+          <span>College of Computer, Qassim University, Qassim</span>
+          <span style="color: gray">Graphic Designer, 01/2025 - Present</span>
         </div>
-        <p style="display:none">Responsible for creating and designing official college materials, ensuring alignment with the college's
-            branding and visual identity.</br>
-            ● Designed official college documents, such as brochures, booklets, and presentations, while
-            ensuring consistency with branding and visual identity.</br>
-            ● Collaborated with faculty and the marketing team to create marketing materials and visual
-            assets for academic events and workshops .</br>
-            ● Utilized Adobe Creative Suite (Photoshop, Illustrator, InDesign) to produce high-quality designs,
-            ensuring timely delivery and attention to detail .</p>
+        <div style="display: none">
+          <p>Responsible for creating and designing official college materials, ensuring alignment with the college's branding and visual identity.</p>
+          <ul>
+            <li>Designed brochures, booklets, and presentations matching college branding.</li>
+            <li>Collaborated with faculty and marketing to create assets for events and workshops.</li>
+            <li>Used Adobe Creative Suite to produce high-quality, on-brand designs.</li>
+          </ul>
         </div>
-        <div class="experience-card">
+      </div>
+      <!-- Experience Card 3: Roznamah -->
+      <div class="experience-card">
         <div class="experience-header">
-            <span>Roznamah, Qassim</span>
-            <span style="color:gray">Graphic Designer, 04/2024 - 07/2024</span>
+          <span>Roznamah, Qassim</span>
+          <span style="color: gray">Graphic Designer, 04/2024 - 07/2024</span>
         </div>
-        <p style="display:none">Responsible for designing engaging and visually appealing social media posts while ensuring alignment
-            with the company's brand identity and messaging.</br>
-            ● Created and designed social media graphics and posts, ensuring consistent visual identity and
-            brand alignment across platforms.</br>
-            ● Collaborated effectively with the team to plan and execute design projects, demonstrating
-            strong communication, problem-solving, and time management skills to meet deadlines and deliver
-            high-quality work under pressure.</p>
+        <div style="display: none">
+          <p>Responsible for designing engaging and visually appealing social media posts while ensuring alignment with the company's brand identity.</p>
+          <ul>
+            <li>Created social media graphics with consistent branding across platforms.</li>
+            <li>Planned and executed design projects collaboratively with the team.</li>
+            <li>Delivered high-quality work under pressure using strong design and time management skills.</li>
+          </ul>
         </div>
+      </div>
     </section>
 
+    <!-- Languages Section -->
     <section id="languages" class="languages">
-        <h2 class="section-title">Languages</h2>
-        <div class="language">Arabic (Native)</div>
-        <div class="language">English (Intermediate)</div>
+      <h2 class="section-title">Languages</h2>
+      <div class="language">Arabic (Native)</div>
+      <div class="language">English (Intermediate)</div>
     </section>
 
+    <!-- My Works Section -->
+    <section id="works" class="my-works">
+      <h2 class="section-title">My Works - Design Showcase</h2>
+      <div class="slider-container">
+        <div class="slider-track">
+          <img src="assets/images/myworks/Design1.png" alt="Design1">
+          <img src="assets/images/myworks/Design2.png" alt="Design2">
+          <img src="assets/images/myworks/Design3.png" alt="Design3">
+          <img src="assets/images/myworks/Design4.png" alt="Design4">
+          <img src="assets/images/myworks/Design5.png" alt="Design5">
+          <img src="assets/images/myworks/Design6.png" alt="Design6">
+          <img src="assets/images/myworks/Design7.png" alt="Design7">
+          <img src="assets/images/myworks/Design8.png" alt="Design8">
+          <img src="assets/images/myworks/Design9.png" alt="Design9">
+          <img src="assets/images/myworks/Design10.png" alt="Design10">
+          <img src="assets/images/myworks/Design11.png" alt="Design11">
+          <img src="assets/images/myworks/Design12.png" alt="Design12">
+          <img src="assets/images/myworks/Design13.png" alt="Design13">
+          <img src="assets/images/myworks/Design14.png" alt="Design14">
+          <img src="assets/images/myworks/Design15.png" alt="Design15">
+          <img src="assets/images/myworks/Design16.png" alt="Design16">
+      </div>
+    </section>
+
+    <!-- Contact Footer -->
     <footer id="contact">
-        <h2 class="section-title">Contact Form</h2>
-        <form>
+      <h2 class="section-title">Contact Form</h2>
+      <form>
         <input type="text" placeholder="Name" required>
         <input type="email" placeholder="Email" required>
         <input type="tel" placeholder="Phone Number">
         <textarea placeholder="Message"></textarea>
         <button type="submit">Send Message</button>
-        </form>
-        <div class="footer-bottom">
+      </form>
+      <div class="footer-bottom">
         <p>Feel free to reach out via social media or visit us at: Riyadh, Saudi Arabia</p>
-        </div>
-        <div class="socials-footer">
-          <a href="https://wa.me/966580892260" target="_blank"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://instagram.com/lamainspire" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://x.com/lamainspire" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://tiktok.com/@lamainspire" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
-      
     </footer>
-    <p class="copyright-text" >All rights reserved © Lama Almushyqih</p>
-</div>
-<script src="js/script.js"></script>
+    <p class="copyright-text">All rights reserved © Lama Almushyqih</p>
+    <div class="socials-footer">
+      <a href="https://wa.me/966580892260" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/lamainspire" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/lamainspire" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://tiktok.com/@lamainspire" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

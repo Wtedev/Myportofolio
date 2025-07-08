@@ -1,24 +1,27 @@
-// إظهار التفاصيل مع تأثير تدريجي للمشاريع والتجارب
+// Show details (fade toggle) for projects and experiences when clicked
+// It toggles the <div> inside .project-card or .experience-card
+
 document.querySelectorAll('.project-card, .experience-card').forEach(card => {
     card.addEventListener('click', () => {
-        const p = card.querySelector('p');
-        if (p) {
-            if (p.style.display === 'block') {
-                p.style.opacity = '0';
+        const hiddenDiv = card.querySelector('div[style*="display"]');
+        if (hiddenDiv) {
+            if (hiddenDiv.style.display === 'block') {
+                hiddenDiv.style.opacity = '0';
                 setTimeout(() => {
-                    p.style.display = 'none';
+                    hiddenDiv.style.display = 'none';
                 }, 300);
             } else {
-                p.style.display = 'block';
+                hiddenDiv.style.display = 'block';
                 setTimeout(() => {
-                    p.style.opacity = '1';
+                    hiddenDiv.style.opacity = '1';
                 }, 10);
             }
         }
     });
 });
 
-// تحكم كامل بالقائمة في الشاشات الصغيرة
+// Automatically close the menu on small screens when a link is clicked
+
 document.querySelectorAll('nav.main-menu a').forEach(link => {
     link.addEventListener('click', () => {
         const checkbox = document.getElementById('menu-toggle');
@@ -28,27 +31,35 @@ document.querySelectorAll('nav.main-menu a').forEach(link => {
     });
 });
 
-// إظهار رسائل تنبيه مخصصة عند إرسال نموذج التواصل
-document.querySelector('footer form').addEventListener('submit', e => {
-    e.preventDefault();
-    alert('Thank you! Your message has been sent successfully.');
-    e.target.reset();
-});
+// Show alert confirmation message when contact form is submitted
 
-// تغيير محتوى الصفحة بناءً على الوقت (صباح الخير، مساء الخير)
+const contactForm = document.querySelector('footer form');
+if (contactForm) {
+    contactForm.addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Thank you! Your message has been sent successfully.');
+        e.target.reset();
+    });
+}
+
+// Change greeting based on current time of day (morning/afternoon/evening)
+
 window.addEventListener('DOMContentLoaded', () => {
     const intro = document.querySelector('.intro');
     const hour = new Date().getHours();
-    if (hour < 12) {
-        intro.textContent = "Good Morning, I'm";
-    } else if (hour < 18) {
-        intro.textContent = "Good Afternoon, I'm";
-    } else {
-        intro.textContent = "Good Evening, I'm";
+    if (intro) {
+        if (hour < 12) {
+            intro.textContent = "Good Morning, I'm";
+        } else if (hour < 18) {
+            intro.textContent = "Good Afternoon, I'm";
+        } else {
+            intro.textContent = "Good Evening, I'm";
+        }
     }
 });
 
-// أزرار تمرير سلس (Smooth Scroll) لجميع الروابط التي تبدأ بـ #
+// Enable smooth scrolling for anchor links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const target = document.querySelector(this.getAttribute('href'));
@@ -59,7 +70,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// إظهار شريط تنبيه مؤقت في أعلى الصفحة
+// Create a temporary top banner notification
+
 function showTemporaryBanner(message) {
     const banner = document.createElement('div');
     banner.textContent = message;
@@ -73,6 +85,7 @@ function showTemporaryBanner(message) {
     banner.style.textAlign = 'center';
     banner.style.zIndex = '9999';
     banner.style.fontWeight = 'bold';
+    banner.style.transition = 'opacity 0.5s ease';
     document.body.appendChild(banner);
 
     setTimeout(() => {
@@ -83,26 +96,32 @@ function showTemporaryBanner(message) {
     }, 3000);
 }
 
-// مثال: إظهار شريط التنبيه بعد ثانيتين من تحميل الصفحة
+// Show welcome banner 2 seconds after page load
+
 setTimeout(() => {
     showTemporaryBanner('Welcome to my portfolio!');
 }, 2000);
+
+// Animate infinite horizontal scroll for the "My Works" slider
+
 const sliderTrack = document.querySelector('.slider-track');
 const sliderContainer = document.querySelector('.slider-container');
 
-// استنساخ الصور لخلق تأثير لا نهائي
-sliderTrack.innerHTML += sliderTrack.innerHTML;
+if (sliderTrack && sliderContainer) {
+    // Duplicate content to create infinite effect
+    sliderTrack.innerHTML += sliderTrack.innerHTML;
 
-let position = 0;
-const speed = 1; // سرعة الحركة - يمكنك تعديلها
+    let position = 0;
+    const speed = 1; // Scrolling speed
 
-function animateSlider() {
-    position -= speed;
-    if (Math.abs(position) >= sliderTrack.scrollWidth / 2) {
-        position = 0;
+    function animateSlider() {
+        position -= speed;
+        if (Math.abs(position) >= sliderTrack.scrollWidth / 2) {
+            position = 0;
+        }
+        sliderTrack.style.transform = `translateX(${position}px)`;
+        requestAnimationFrame(animateSlider);
     }
-    sliderTrack.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(animateSlider);
-}
 
-animateSlider();
+    animateSlider();
+}

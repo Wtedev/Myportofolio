@@ -1,3 +1,4 @@
+--css--
 html {
   scroll-behavior: smooth;
 }
@@ -475,7 +476,7 @@ footer button {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 30px;
   justify-content: center;
 }
 
@@ -484,14 +485,15 @@ footer button {
   border-radius: 12px;
   padding: 10px;
   text-align: center;
-  width: 100px;
-  height: 100px;
-  margin: 5px;
+  width: 120px;
+  height: 120px;
   font-size: 1rem;
-  display: inline-block;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .skills-list li:hover {
@@ -504,13 +506,3 @@ footer button {
   margin-top: 5px;
 }
 
-.skill-card {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  background-color: white;
-  border-radius: 12px;
-  padding: 10px;
-  text-align: center;
-}
