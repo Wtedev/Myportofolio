@@ -1,7 +1,10 @@
---css--
+/* ====== Website Main Structure ====== */
+
 html {
   scroll-behavior: smooth;
 }
+
+/* ====== Body with Animated Gradient Background ====== */
 body {
   margin: 0;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -9,11 +12,20 @@ body {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
+
+/* ====== Gradient Animation Keyframes ====== */
 @keyframes gradient {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
+/* ====== Section Container (Padding for Layout) ====== */
+.container {
+  padding-inline: 10vw;
+}
+
+/* ====== Header Section ====== */
 header {
   display: flex;
   align-items: center;
@@ -25,59 +37,66 @@ header {
   z-index: 10;
   gap: 20px;
 }
-.container {
-  padding-inline: 10vw;
-}
+
+/* ====== Logo Styling ====== */
 .logo2 {
   width: 40px;
   padding: 10px;
 }
+
+/* ====== Hamburger Menu (Checkbox Hidden by Default) ====== */
 .menu-toggle-checkbox {
   display: none;
 }
+
+/* ====== Hamburger Menu Icon Label (Hidden by Default) ====== */
 .menu-toggle-label {
   display: none;
   font-size: 2rem;
   cursor: pointer;
   color: #e11a54;
 }
-.close-button {
-  display: none;
-}
+
+/* ====== Main Navigation Menu ====== */
 nav.main-menu {
   display: flex;
-  justify-content:space-between; 
+  justify-content: space-between; 
   align-items: center;    
   flex: 1;     
   gap: 20px;
   padding: 0px 10px;
 }
+/* ========== Theme Toggle ========== */
+#theme-toggle:hover {
+  transform: scale(1.2) rotate(15deg);
+  color: #ff6b81; 
+  text-shadow: 0 0 5px currentColor;
+}
 
+
+/* ====== Close Button for Mobile Navigation (Hidden by Default) ====== */
+.close-button {
+  display: none;
+}
+
+/* ====== Navigation Links Styling ====== */
 nav a {
-  margin: 0px 0px;
+  margin: 0;
   text-decoration: none;
   color: #333;
   font-weight: 500;  
 }
-body.dark-mode nav.main-menu {
-  background-color: #2c2c2c !important;
-}
 
-body.dark-mode nav.main-menu a {
-  color: #f5f5f5 !important;
-}
-
-body.dark-mode nav.main-menu .close-button {
-  color: #ff6b81 !important;
-}
-
+/* ====== Social Media Icons Container ====== */
 .socials {
   display: flex;
   padding-left: 40px;
   gap: 6px; 
 }
+
+/* Style for social media links (icons) */
 .socials a {
-  font-size: 1.6rem; 
+  font-size: 1.6rem;              
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
@@ -86,10 +105,22 @@ body.dark-mode nav.main-menu .close-button {
   align-items: center;
   gap: 5px;
 }
+
+/* ====== Individual Social Icon Styling ====== */
 .socialsicons {
   color: #e11a54;
 }
 
+/* ========== Theme Toggle Icon ========== */
+#theme-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  color: #e11a54;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+/* ========== Hero Section ============ */
+/* ===== Hero Section Container ===== */
 .hero {
   display: flex;
   align-items: center;
@@ -104,66 +135,13 @@ body.dark-mode nav.main-menu .close-button {
   gap: 40px;
 }
 
+/* ===== Text Container in Hero Section ===== */
 .hero-text {
   flex: 1;
   max-width: 600px;
 }
 
-.intro {
-  font-size: 1.2rem;
-  color: #000;
-  margin-bottom: 0.3rem;
-}
-
-.Myname {
-  font-size: 4rem;
-  font-weight: 700;
-  color: #e11a54;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 1.4rem;
-  color: #666;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.description {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.hire-button {
-  background-color: #e11a54;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 28px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.hire-button:hover {
-  background-color: #c71346;
-}
-
-.hero-image img {
-  max-width: 300px;
-  border-radius: 20px;
-}
-
-
+/* ===== Availability Badge (Online Status) ===== */
 .availability-badge {
   display: flex;
   align-items: center;
@@ -175,6 +153,7 @@ body.dark-mode nav.main-menu .close-button {
   z-index: 1;
 }
 
+/* ===== Green Status Dot with Glow Animation ===== */
 .pulse-dot {
   width: 14px;
   height: 14px;
@@ -182,7 +161,6 @@ body.dark-mode nav.main-menu .close-button {
   border-radius: 50%;
   position: relative;
 }
-
 .pulse-dot::after {
   content: '';
   position: absolute;
@@ -196,6 +174,7 @@ body.dark-mode nav.main-menu .close-button {
   z-index: 0;
 }
 
+/* ===== Pulse Animation for the Dot ===== */
 @keyframes pulseGlow {
   0% {
     transform: scale(0.9);
@@ -211,61 +190,160 @@ body.dark-mode nav.main-menu .close-button {
   }
 }
 
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 20px;
-    gap: 30px;
-  }
-
-  .hero-text {
-    max-width: 100%;
-  }
-
-  .Myname {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
-  }
-
-  .description {
-    font-size: 0.95rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-image img {
-    display: none;
-    width: 80%;
-    max-width: 220px;
-    margin-top: 20px;
-  }
-
-  .availability-badge {
-    justify-content: center;
-    font-size: 0.85rem;
-  }
+/* ===== Intro Text (small top text) ===== */
+.intro {
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 0.3rem;
 }
 
-.skills, .projects, .experiences, .languages, .contact {
-  margin: 40px 20px;
+/* ===== Main Name Heading ===== */
+.Myname {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #e11a54;
+  margin: 0;
+}
+
+/* ===== Subtitle (job title or slogan) ===== */
+.subtitle {
+  font-size: 1.4rem;
+  color: #666;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Paragraph Description Text ===== */
+.description {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* ===== Buttons Group in Hero Section ===== */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* ===== Primary Call-To-Action Button ===== */
+.hire-button,
+footer button {
+  background-color: #e11a54;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hire-button:hover {
+  background-color: #c71346;
+}
+
+/* ===== Hero Section Image Styling ===== */
+.hero-image img {
+  max-width: 300px;
+  border-radius: 20px;
 }
 .section-title {
   font-size: 1.8rem;
   margin-bottom: 20px;
 }
+/* ========== Website Sections ============ */
+/* Adds space around the skills, projects, experiences, languages, and contact sections */
+.skills, .projects, .experiences, .languages, .contact {
+  margin: 40px 20px;
+}
+/* ============= Skills Section============ */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 20px auto;
+  height: 220px;
+  padding-bottom: 20px; 
+}
+
+.skills-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollSkills 40s linear infinite;
+}
+
+.skills-slide {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 140px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.skills-list li {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
 .skill-type {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: gray;
+  margin-top: 5px;
 }
+
+.skills-list li:hover {
+  transform: scale(1.05);
+}
+
+.skills-list .skill-type {
+  font-size: 0.75rem;
+  color: gray;
+  margin-top: 5px;
+}
+.skills-slide:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollSkills {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ========== Project & experiences Sections ============ */
 .project-card, .experience-card {
   background-color: white;
   border-radius: 12px;
@@ -273,11 +351,34 @@ body.dark-mode nav.main-menu .close-button {
   margin-bottom: 10px;
   cursor: pointer;
 }
+
 .project-header, .experience-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.project-card p,
+.experience-card p {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.project-card:hover,
+.experience-card:hover {
+  animation: pulseOpen 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+/* ========== Education Section ============ */
+.education-card {
+  background-color: transparent;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+
+/* ========== Languages Section ============ */
 
 .language {
   display: inline-block;
@@ -287,6 +388,67 @@ body.dark-mode nav.main-menu .close-button {
   margin: 10px;
   font-weight: bold;
 }
+/* ========== My Works Section Section ============ */
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollGallery 40s linear infinite;
+}
+
+.slider-track img {
+  flex: 0 0 auto;
+  height: 200px;
+  width: auto;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@keyframes scrollGallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+
+.design-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.design-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.design-card img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.design-card p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.design-card:hover {
+  transform: scale(1.05);
+}
+
+
+/* ========== Footer Section ============ */
+/* =========== Contact Form ============= */
+
 footer {
   background-color: white;
   border-radius: 20px;
@@ -303,19 +465,15 @@ footer input, footer textarea {
   border-radius: 8px;
   border: 1px solid #ccc;
 }
-footer button {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
+
+
 .footer-bottom {
   margin-top: 20px;
   font-size: 0.9rem;
   color: #747474;
 }
+/* =========== Copyright Section ============= */
+
 .copyright-text {
   font-size: 0.9rem;
   color: #747474;
@@ -323,6 +481,99 @@ footer button {
   margin-top: 20px;
   font-weight: 400;
 }
+
+
+.socials-footer {
+  margin-top: 10px;      
+  margin-bottom: 30px;  
+  display: flex;
+  justify-content: center;
+  gap: 10px;           
+}
+
+.socials-footer a {
+  font-size: 1.4rem;
+  color: #555;
+  transition: transform 0.2s ease;
+}
+
+.socials-footer a:hover {
+  transform: scale(1.2);
+}
+
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  background: #121212 !important;
+  color: #f1f1f1;
+}
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #333333 !important;
+}
+
+body.dark-mode nav.main-menu {
+  background-color: #333333 !important;
+}
+
+body.dark-mode nav a,
+body.dark-mode .section-title,
+body.dark-mode .description,
+body.dark-mode .subtitle,
+body.dark-mode .intro {
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode .hero {
+  background-color:  #333333 !important;
+  color: #fff;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .experience-card,
+body.dark-mode .skills-list li,
+body.dark-mode .language,
+body.dark-mode .design-card {
+  background-color: #333333 !important;
+  color: #eee !important;
+}
+
+body.dark-mode .skills-slide {
+  background-color: #333;
+  color: white;
+}
+body.dark-mode .skill-type {
+  color: #ccc;
+}
+
+body.dark-mode .hire-button footer button{
+  background-color: #e11a54;
+}
+
+body.dark-mode .hire-button:hover {
+  background-color: #ff4d6d;
+}
+
+body.dark-mode footer input,
+body.dark-mode footer textarea {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #747474;
+}
+
+body.dark-mode .socials-footer a {
+  color: #f5f5f5;/
+}
+
+body.dark-mode #theme-toggle {
+  color: #ffc107; 
+  transform: rotate(180deg); 
+}
+
+
+
+/* ===== Responsive Styles===== */
+
 @media (max-width: 1330px) {
   header {
     flex-wrap: wrap;
@@ -378,7 +629,7 @@ footer button {
   }
   .hero-text {
     max-width: 100%;
-  }
+  }@me
   .hero-text .herosectiontext {
     font-size: 2.2rem;
   }
@@ -391,239 +642,45 @@ footer button {
     padding-inline: 5vw;
   }
 }
-@keyframes pulseOpen {
-  0% {
-    transform: scale(1);
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 30px;
   }
-  50% {
-    transform: scale(1.015);
+
+  .hero-text {
+    max-width: 100%;
   }
-  100% {
-    transform: scale(1);
+
+  .Myname {
+    font-size: 2.5rem;
   }
-}
 
-.project-card:hover,
-.experience-card:hover {
-  animation: pulseOpen 0.35s ease-in-out;
-  cursor: pointer;
-}
-.socials-footer {
-  margin-top: 10px;      
-  margin-bottom: 30px;  
-  display: flex;
-  justify-content: center;
-  gap: 10px;           
-}
+  .subtitle {
+    font-size: 1.1rem;
+  }
 
-.socials-footer a {
-  font-size: 1.4rem;
-  color: #555;
-  transition: transform 0.2s ease;
-}
+  .description {
+    font-size: 0.95rem;
+  }
 
-body.dark-mode .socials-footer a {
-  color: #f5f5f5;/
-}
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.socials-footer a:hover {
-  transform: scale(1.2);
-}
+  .hero-image img {
+    display: none;
+    width: 80%;
+    max-width: 220px;
+    margin-top: 20px;
+  }
 
-.project-card p,
-.experience-card p {
-    transition: opacity 0.3s ease;
-    opacity: 0;
-}
-.design-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.design-card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 10px;
-  width: 250px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.design-card img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  height: 200px;
-}
-
-.design-card p {
-  margin-top: 10px;
-  font-weight: 500;
-  color: #333;
-}
-
-.design-card:hover {
-  transform: scale(1.05);
-}
-.slider-container {
-  overflow: hidden;
-  height: 200px;
-  width: 100%;
-  margin: 20px auto;
-}
-
-.slider-track {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.slider-track img {
-  height: 200px;
-  max-width: 300px;
-  width: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-.skills-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.skills-list li {
-  background-color: white;
-  border-radius: 12px;
-  padding: 10px;
-  text-align: center;
-  width: 120px;
-  height: 120px;
-  font-size: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.skills-list li:hover {
-  transform: scale(1.05);
-}
-
-.skills-list .skill-type {
-  font-size: 0.75rem;
-  color: gray;
-  margin-top: 5px;
-}
-/* ========== Dark Mode Base ========== */
-body.dark-mode {
-  background: #121212 !important;
-  color: #f1f1f1;
-}
-
-/* ========== Layout Elements ========== */
-body.dark-mode header,
-body.dark-mode footer {
-  background-color: #333333 !important;
-}
-
-body.dark-mode nav a,
-body.dark-mode .section-title,
-body.dark-mode .description,
-body.dark-mode .subtitle,
-body.dark-mode .intro {
-  color: #f5f5f5 !important;
-}
-
-/* ========== Cards & Components ========== */
-body.dark-mode .hero {
-  background-color:  #333333 !important;
-  color: #fff;
-}
-
-body.dark-mode .project-card,
-body.dark-mode .experience-card,
-body.dark-mode .skills-list li,
-body.dark-mode .language,
-body.dark-mode .design-card {
-  background-color: #333333 !important;
-  color: #eee !important;
-}
-
-/* ========== Buttons ========== */
-.hire-button,
-footer button {
-  background-color: #e11a54;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 28px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.hire-button:hover,
-footer button:hover {
-  background-color: #c71346;
-}
-
-body.dark-mode .hire-button {
-  background-color: #e11a54;
-}
-
-body.dark-mode .hire-button:hover {
-  background-color: #ff4d6d;
-}
-
-/* ========== Form Fields ========== */
-footer input,
-footer textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-body.dark-mode footer input,
-body.dark-mode footer textarea {
-  background-color: #2a2a2a;
-  color: white;
-  border: 1px solid #747474;
-}
-
-/* ========== Education Section ========== */
-.education-card {
-  background-color: transparent;
-  padding: 20px;
-  margin: 10px 0;
-}
-
-/* ========== Theme Toggle Icon ========== */
-#theme-toggle {
-  font-size: 24px;
-  cursor: pointer;
-  color: #e11a54;
-  transition: color 0.4s ease, transform 0.4s ease;
-}
-
-body.dark-mode #theme-toggle {
-  color: #ffc107; 
-  transform: rotate(180deg); 
-}
-
-
-#theme-toggle:hover {
-  transform: scale(1.2) rotate(15deg);
-  color: #ff6b81; 
-}
-
-#theme-toggle:hover {
-  text-shadow: 0 0 5px currentColor;
+  .availability-badge {
+    justify-content: center;
+    font-size: 0.85rem;
+  }
 }
