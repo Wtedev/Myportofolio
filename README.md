@@ -1,6 +1,5 @@
 <p align="center">
   <a href="https://wtedev.github.io/Myportofolio/" target="_blank">
-    <img src="https://img.icons8.com/color/96/source-code.png" width="120" alt="Portfolio Logo">
   </a>
 </p>
 
